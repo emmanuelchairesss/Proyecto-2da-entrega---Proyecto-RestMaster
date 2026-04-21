@@ -56,7 +56,7 @@ public class InventarioTest {
         assertTrue(resultado >= 0, "Debe eliminarse correctamente");
     }
 
-    //  TC004 - Cancelar eliminación (simulado)
+    //  TC004 - Cancelar eliminación 
     @Test
     public void testCancelarEliminacion() {
         boolean confirmacion = false;
