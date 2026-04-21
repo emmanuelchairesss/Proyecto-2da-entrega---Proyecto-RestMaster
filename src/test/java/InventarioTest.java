@@ -38,7 +38,7 @@ public class InventarioTest {
     @Test
     public void testActualizarProducto() {
         Producto p = new Producto();
-        p.setIdProducto(1); // ⚠️ debe existir en BD
+        p.setIdProducto(1); 
         p.setNombreProducto("EditadoTest");
         p.setPrecioProducto(30.0);
         p.setCantidadProducto(5);
@@ -51,7 +51,7 @@ public class InventarioTest {
     //  TC003 - Eliminar producto
     @Test
     public void testEliminarProducto() {
-        int resultado = dao.eliminarProducto(1); // ⚠️ ID debe existir
+        int resultado = dao.eliminarProducto(1);
 
         assertTrue(resultado >= 0, "Debe eliminarse correctamente");
     }
@@ -71,7 +71,7 @@ public class InventarioTest {
     //  TC005 - Obtener producto
     @Test
     public void testObtenerProducto() {
-        Producto producto = dao.obtenerProducto(1); // ⚠️ ID existente
+        Producto producto = dao.obtenerProducto(1); 
 
         if (producto != null) {
             assertNotNull(producto.getNombreProducto());
@@ -96,8 +96,6 @@ public class InventarioTest {
     @Test
     public void testEditarSinSeleccion() {
         int filaSeleccionada = -1;
-
-        // Simulamos que debería permitir editar (pero no debería)
         boolean puedeEditar = filaSeleccionada >= 0;
 
         assertTrue(puedeEditar, "El sistema debería permitir editar sin selección (ERROR)");

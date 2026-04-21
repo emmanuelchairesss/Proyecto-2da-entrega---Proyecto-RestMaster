@@ -62,7 +62,7 @@ public void testSinSeleccionAsistencia() {
     boolean chkSi = false;
     boolean chkNo = false;
 
-    boolean asistenciaValida = chkSi ^ chkNo; // solo uno debe ser true
+    boolean asistenciaValida = chkSi ^ chkNo; 
 
     assertFalse(asistenciaValida,
             "Debe detectar error cuando no se selecciona ninguna opción");
@@ -73,7 +73,7 @@ public void testSinSeleccionAsistencia() {
 public void testHoraInvalida() {
     boolean chkSi = true;
     boolean chkNo = false;
-    String hora = "abc"; // inválida
+    String hora = "abc"; 
 
     boolean horaValida = hora.matches("\\d{2}:\\d{2}");
 
