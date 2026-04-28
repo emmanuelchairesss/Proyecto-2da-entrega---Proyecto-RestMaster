@@ -1,13 +1,13 @@
 -------------------------------------------------------------------------------
 Test set: InventarioTest
 -------------------------------------------------------------------------------
-Tests run: 10, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.017 s <<< FAILURE! -- in InventarioTest
-InventarioTest.testEliminarSinSeleccion -- Time elapsed: 0.006 s <<< FAILURE!
+Tests run: 10, Failures: 2, Errors: 0, Skipped: 0, Time elapsed: 1.418 s <<< FAILURE! -- in InventarioTest
+InventarioTest.testEliminarSinSeleccion -- Time elapsed: 0.005 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: El sistema debería permitir eliminar sin selección (ERROR) ==> expected: <true> but was: <false>
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:40)
 	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:193)
-	at InventarioTest.testEliminarSinSeleccion(InventarioTest.java:113)
+	at InventarioTest.testEliminarSinSeleccion(InventarioTest.java:111)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688)
@@ -76,12 +76,12 @@ org.opentest4j.AssertionFailedError: El sistema debería permitir eliminar sin s
 	at org.apache.maven.surefire.booter.ForkedBooter.run(ForkedBooter.java:507)
 	at org.apache.maven.surefire.booter.ForkedBooter.main(ForkedBooter.java:495)
 
-InventarioTest.testEditarSinSeleccion -- Time elapsed: 0.003 s <<< FAILURE!
+InventarioTest.testEditarSinSeleccion -- Time elapsed: 0.001 s <<< FAILURE!
 org.opentest4j.AssertionFailedError: El sistema debería permitir editar sin selección (ERROR) ==> expected: <true> but was: <false>
 	at org.junit.jupiter.api.AssertionUtils.fail(AssertionUtils.java:55)
 	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:40)
 	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:193)
-	at InventarioTest.testEditarSinSeleccion(InventarioTest.java:103)
+	at InventarioTest.testEditarSinSeleccion(InventarioTest.java:101)
 	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at org.junit.platform.commons.util.ReflectionUtils.invokeMethod(ReflectionUtils.java:688)

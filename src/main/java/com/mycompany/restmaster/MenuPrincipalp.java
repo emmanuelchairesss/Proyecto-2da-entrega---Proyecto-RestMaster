@@ -2,7 +2,9 @@ package com.mycompany.restmaster;
 
 
 import Pantallas.AsistenciaReserva;
+import Pantallas.HistorialClientes;
 import Pantallas.Inventario;
+import Pantallas.RegistrarAsistencia;
 import Pantallas.ReservarMesas;
 import java.awt.BorderLayout;
 import java.awt.Color;
@@ -96,6 +98,10 @@ public void Date(){
         btnInventario = new javax.swing.JButton();
         PanelAsistenciaReserva = new javax.swing.JPanel();
         btnAsisReserva = new javax.swing.JButton();
+        PanelRegiAsistencia = new javax.swing.JPanel();
+        btnAsisPersonal = new javax.swing.JButton();
+        PregisClientes = new javax.swing.JPanel();
+        btnVerHistorial = new javax.swing.JButton();
         PanelFondo = new javax.swing.JPanel();
         Pcerrar = new javax.swing.JPanel();
         lblCerrar = new javax.swing.JLabel();
@@ -265,11 +271,78 @@ public void Date(){
             PanelAsistenciaReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelAsistenciaReservaLayout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(btnAsisReserva, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addComponent(btnAsisReserva, javax.swing.GroupLayout.PREFERRED_SIZE, 262, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         PanelAsistenciaReservaLayout.setVerticalGroup(
             PanelAsistenciaReservaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(btnAsisReserva, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
+        );
+
+        PanelRegiAsistencia.setBackground(new java.awt.Color(102, 153, 0));
+
+        btnAsisPersonal.setBackground(new java.awt.Color(102, 153, 0));
+        btnAsisPersonal.setFont(new java.awt.Font("Roboto Condensed Black", 1, 18)); // NOI18N
+        btnAsisPersonal.setForeground(new java.awt.Color(255, 255, 255));
+        btnAsisPersonal.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/tick-mark (1).png"))); // NOI18N
+        btnAsisPersonal.setText("Registrar Asistencia");
+        btnAsisPersonal.setBorder(null);
+        btnAsisPersonal.setBorderPainted(false);
+        btnAsisPersonal.setContentAreaFilled(false);
+        btnAsisPersonal.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnAsisPersonal.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnAsisPersonal.setIconTextGap(20);
+        btnAsisPersonal.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnAsisPersonalActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout PanelRegiAsistenciaLayout = new javax.swing.GroupLayout(PanelRegiAsistencia);
+        PanelRegiAsistencia.setLayout(PanelRegiAsistenciaLayout);
+        PanelRegiAsistenciaLayout.setHorizontalGroup(
+            PanelRegiAsistenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnAsisPersonal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        PanelRegiAsistenciaLayout.setVerticalGroup(
+            PanelRegiAsistenciaLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(btnAsisPersonal, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 62, Short.MAX_VALUE)
+        );
+
+        PregisClientes.setBackground(new java.awt.Color(102, 153, 0));
+
+        btnVerHistorial.setFont(new java.awt.Font("Roboto Condensed Black", 1, 18)); // NOI18N
+        btnVerHistorial.setForeground(new java.awt.Color(255, 255, 255));
+        btnVerHistorial.setIcon(new javax.swing.ImageIcon(getClass().getResource("/Imagen/profile_5765536.png"))); // NOI18N
+        btnVerHistorial.setText("Ver Historial de Clientes");
+        btnVerHistorial.setBorder(null);
+        btnVerHistorial.setBorderPainted(false);
+        btnVerHistorial.setContentAreaFilled(false);
+        btnVerHistorial.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnVerHistorial.setFocusPainted(false);
+        btnVerHistorial.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnVerHistorial.setIconTextGap(20);
+        btnVerHistorial.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnVerHistorialActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout PregisClientesLayout = new javax.swing.GroupLayout(PregisClientes);
+        PregisClientes.setLayout(PregisClientesLayout);
+        PregisClientesLayout.setHorizontalGroup(
+            PregisClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 259, Short.MAX_VALUE)
+            .addGroup(PregisClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(PregisClientesLayout.createSequentialGroup()
+                    .addComponent(btnVerHistorial, javax.swing.GroupLayout.DEFAULT_SIZE, 253, Short.MAX_VALUE)
+                    .addContainerGap()))
+        );
+        PregisClientesLayout.setVerticalGroup(
+            PregisClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 61, Short.MAX_VALUE)
+            .addGroup(PregisClientesLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addComponent(btnVerHistorial, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 61, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout PanelMenuLayout = new javax.swing.GroupLayout(PanelMenu);
@@ -290,8 +363,16 @@ public void Date(){
                 .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
             .addComponent(PanelInventario, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(PanelCerrarSesion, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
-            .addComponent(PanelAsistenciaReserva, javax.swing.GroupLayout.DEFAULT_SIZE, 245, Short.MAX_VALUE)
+            .addComponent(PanelAsistenciaReserva, javax.swing.GroupLayout.DEFAULT_SIZE, 274, Short.MAX_VALUE)
+            .addGroup(PanelMenuLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(PanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(PanelRegiAsistencia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(PanelCerrarSesion, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 262, Short.MAX_VALUE)
+                    .addGroup(PanelMenuLayout.createSequentialGroup()
+                        .addComponent(PregisClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         PanelMenuLayout.setVerticalGroup(
             PanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -306,9 +387,13 @@ public void Date(){
                 .addComponent(PanelInventario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addComponent(PanelAsistenciaReserva, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 8, Short.MAX_VALUE)
+                .addComponent(PanelRegiAsistencia, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(PregisClientes, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(12, 12, 12)
                 .addComponent(PanelCerrarSesion, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(112, 112, 112)
+                .addGap(18, 18, 18)
                 .addGroup(PanelMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, PanelMenuLayout.createSequentialGroup()
                         .addComponent(lblUser, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -395,7 +480,7 @@ public void Date(){
         );
         PanelTodosLayout.setVerticalGroup(
             PanelTodosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 613, Short.MAX_VALUE)
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
         javax.swing.GroupLayout PanelPrincipalLayout = new javax.swing.GroupLayout(PanelPrincipal);
@@ -403,7 +488,7 @@ public void Date(){
         PanelPrincipalLayout.setHorizontalGroup(
             PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(PanelPrincipalLayout.createSequentialGroup()
-                .addComponent(PanelMenu, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(PanelMenu, javax.swing.GroupLayout.PREFERRED_SIZE, 270, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(0, 0, Short.MAX_VALUE)
                 .addGroup(PanelPrincipalLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(PanelPrincipalLayout.createSequentialGroup()
@@ -417,8 +502,8 @@ public void Date(){
             .addGroup(PanelPrincipalLayout.createSequentialGroup()
                 .addComponent(PanelFondo, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(PanelTodos, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(17, Short.MAX_VALUE))
+                .addComponent(PanelTodos, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addContainerGap())
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -510,6 +595,30 @@ public void Date(){
     PanelTodos.repaint();
     }//GEN-LAST:event_btnAsisReservaActionPerformed
 
+    private void btnAsisPersonalActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnAsisPersonalActionPerformed
+        RegistrarAsistencia p = new RegistrarAsistencia(usuarioLogeado);
+
+        p.setSize(1120, 684);
+        p.setLocation(0, 0);
+
+        PanelTodos.removeAll();
+        PanelTodos.add(p, BorderLayout.CENTER);
+        PanelTodos.revalidate();
+        PanelTodos.repaint();
+    }//GEN-LAST:event_btnAsisPersonalActionPerformed
+
+    private void btnVerHistorialActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnVerHistorialActionPerformed
+        HistorialClientes p = new HistorialClientes();
+
+        p.setSize(1120, 684);
+        p.setLocation(0, 0);
+
+        PanelTodos.removeAll();
+        PanelTodos.add(p, BorderLayout.CENTER);
+        PanelTodos.revalidate();
+        PanelTodos.repaint();
+    }//GEN-LAST:event_btnVerHistorialActionPerformed
+
     /**
      * @param args the command line arguments
      */
@@ -552,13 +661,17 @@ public void Date(){
     public javax.swing.JPanel PanelInventario;
     private javax.swing.JPanel PanelMenu;
     private javax.swing.JPanel PanelPrincipal;
+    public javax.swing.JPanel PanelRegiAsistencia;
     private javax.swing.JPanel PanelTodos;
     private javax.swing.JPanel Pcerrar;
     public javax.swing.JPanel Pmesas;
+    public javax.swing.JPanel PregisClientes;
+    public javax.swing.JButton btnAsisPersonal;
     public javax.swing.JButton btnAsisReserva;
     public javax.swing.JButton btnCerrarSesion;
     public javax.swing.JButton btnInventario;
     public javax.swing.JButton btnReservarMesas;
+    public javax.swing.JButton btnVerHistorial;
     private javax.swing.JLabel fecha;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;

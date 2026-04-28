@@ -25,6 +25,8 @@ public class ColoresPaneles implements MouseListener {
     view.btnInventario.addMouseListener(this);
     view.btnCerrarSesion.addMouseListener(this);
     view.btnAsisReserva.addMouseListener(this);
+    view.btnAsisPersonal.addMouseListener(this);
+    view.btnVerHistorial.addMouseListener(this);
     
 }
     public ColoresPaneles(MenuPrincipalp view){
@@ -59,8 +61,11 @@ public class ColoresPaneles implements MouseListener {
             changeColor(view.PanelCerrarSesion, new Color(153,0,0));
        } else if(evt.equals(view.btnAsisReserva)){
             changeColor(view.PanelAsistenciaReserva, new Color(131,193,0));
-    
-    }
+       } else if (evt.equals(view.btnAsisPersonal)){
+            changeColor(view.PanelRegiAsistencia, new Color(131,193,0));
+       }else if(evt.equals(view.btnVerHistorial)){
+            changeColor(view.PregisClientes, new Color(131,193,0));
+       }
     
     }
     @Override
@@ -76,7 +81,12 @@ public class ColoresPaneles implements MouseListener {
 
      } else if(evt.equals(view.btnAsisReserva)){
             changeColor(view.PanelAsistenciaReserva, new Color(102,153,0));
-    } 
+    } else if (evt.equals(view.btnAsisPersonal)){
+            changeColor(view.PanelRegiAsistencia, new Color(102,153,0));
+    } else if(evt.equals(view.btnVerHistorial)){
+            changeColor(view.PregisClientes, new Color(102,153,0));
+       }
+        
     }
     private void changeColor(JPanel panel, Color color){
         panel.setBackground(color);

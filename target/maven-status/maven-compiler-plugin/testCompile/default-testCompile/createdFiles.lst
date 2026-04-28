@@ -1,4 +1,6 @@
 AsistenciasReservasTest.class
 LoginTest.class
 ReservarMesasTest.class
+HistorialClientesTest.class
 InventarioTest.class
+AsistenciaPersonalTest.class
